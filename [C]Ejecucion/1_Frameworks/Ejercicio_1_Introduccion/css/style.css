@@ -1,4 +1,20 @@
-/* 
-    todos los estilos de este ejercicio son estilos 
-    o combinaciones de los estilos de boostrap.
-*/
+/* para la estructura de los carteles de las personas */
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+
+/* control de imagenes */
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
