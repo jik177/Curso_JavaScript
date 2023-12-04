@@ -1,34 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operadores de logica</title>
 </head>
+
 <body>
-    <!-- 
-                    -----Operadarores logicos-----
 
-        Operador                Simbolo                 Descripcion
+    <script>
+        /*
+                        -----Operadarores logicos-----
+    
+            Operador                Simbolo                 Descripcion
+    
+          Y(copulativas)              &&                  dos sentencias o mas,
+                                                        todas las sentencias son true.
+    
+                Ó                    ||                   dos sentencias o mas,
+                                                        alguna de las sentencias es true.
+    
+            NO(negacion)              !                    inversa de la sentencia
+     */
 
-      Y(copulativas)              &&                  dos sentencias o mas,
-                                                    todas las sentencias son true.
+     console.log('Operadarores logicos')
 
-            Ó                    ||                   dos sentencias o mas,
-                                                    alguna de las sentencias es true.
+        var nombre1 = 'Alex'
+        var nombre2 = 'Javi'
 
-        NO(negacion)              !                    inversa de la sentencia
+        console.log('condicion Y: ' + ((nombre1 == 'Alex') && (nombre2 == 'Javi')));
 
+        console.log('condicion Ó: ' + ((nombre1 == 'Alex') || (nombre2 == 'Javier')));
 
-                    -----Operadarores Relacionales-----
+        console.log('condicion NO: ' + !(nombre1 == 'Alex'));
 
-        Operador                Simbolo                 Descripcion
+        console.log('')
+        /*
+                           -----Operadarores Aritmeticos-----
+       
+               Operador                Simbolo                 Descripcion
+            
+               matematicos            +, -, *, /               
+       
+             cambio de signo          -(-argumento)            Cambio de signo del argumeto
+             
+             Incremento                    ++                  incremetno de una unidad
+       
+             decremento                    --                  decremeto de un unidad
+       
+           resto de division               %                       resto de la division
+       */
+     console.log('Operadarores Aritmeticos')
+
      
+
+     console.log('')
+        /*  
+                            -----Operadarores Relaciones-----
         
+                Operador                    Simbolo                 Descripcion
+                
+                igualdad                      ==                    iguardad aritmetica o relacionada(cte).
+        
+            distinto a igual                  !=                    contrario al argumento comparado.     
+        
+            Mayor que                         >                     comparacion de cantidad numerica.
+        
+            Mayor e igual                     >=                    comparacion de cantidad numerica.
+        
+            Menor que                          <                    comparacion de cantidad numerica.
+        
+            Menor e igual                     <=                    comparacion de cantidad numerica.
+        
+            igualdad estricta                 ===                   igualdad de toda la naturaleza 
+                                                                    de la variable (tipo y valor)
+        
+        distinito de igualdad estricta        !==                   contrario al argumento que compara.  
+        
+        */
+        console.log('Operadarores Relaciones')
+        var numero = 7;
 
+        console.log('igualdad ' + (numero == 7));
+        console.log('igualdad estricta ' + (numero === 7));
+        console.log('mayor que' + (numero > 6));
+        console.log('mayor e igual que' + (numero >= 6));
+        console.log('menor que' + (numero < 6));
+        console.log('menor e igual que' + (numero <= 6));
 
+        console.log('desigualdad ' + (numero != 7));
+        console.log('distinito de igualdad estricta ' + (numero !== '7'));
 
-
-    -->
+        console.log('') 
+    </script>
 </body>
+
 </html>
