@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+    ✔️ Como ta habiamos isto, todos los datos que recogemos a traves de nuestro Cliente(browser)
+    seran de tipo string. para ello necesitamos transformar ese dato en case de uso 
+    numerico a number
+ 
+               Arquitectura Script
+            
+        1º declaracion de variable
+            a) Variables principales
+            b) Variables secundarias
+            c) variables de apoyo
+
+    -->
+    <script>
+        /* 
+        var dato = 0; ⬅️ aqui vemos una variable implicita 
+
+        dato = prompt('escribe un numero.') ⬅️ variable, valor y metodo explicito 
+        console.log(dato) 
+        */
+
+        var dato = prompt('escribe un numero decimal:')
+        console.log(dato)
+        console.log(dato + ' que tipo de variable es: ' + typeof (dato));
+        /* 
+                 ----- Conversiones de las cadenas de texto-----
+            
+            habra 2 metodos principales:
+
+            a) parseFloat(): covertira el argumento string devolviendo un numero
+                        del punto flotante, es decir, si el primer caracter no
+                        no se puede convertir a numero no devolvera a un NaN,asociado 
+                        a un NULL.
+                        - Si es capaz de reconocer el primer caracter en numero, seguira
+                        construyendo la estructura numerica y cuando identificara el 
+                        decimal, es decir, la coma continuara construyendo el argumento
+                        numerico.
+        */
+        var real = parseFloat(dato);
+        console.log(real + ' que tipo de variable es: ' + typeof (real));
+        console.log('dto creado a la variable: ' + real * 0.1);
+        /*
+            b) parseInt(): Convertira el argumeno string devolviendo un numero entero;
+                    es decir, si el primer caracter no puede convertir el numero, Nam,
+                    y asociado a un NULL.
+                    - El funcionamiento de dicho metodo, es similar al float, pero 
+                    inverso, al percibir el punto, lo observara y no continuara la 
+                    construccion del argumento numerico.
+        */
+        var entero = parseInt(dato);
+        console.log(entero);
+        console.log('total a pagar: ' + (entero - 0.5));
+    </script>
+
+
+</body>
+
+</html>

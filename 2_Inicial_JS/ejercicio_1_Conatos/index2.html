@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llamadas de JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <script>
+        /* 
+                        comentarios 
+            Podemos ver que las llamadas de una funcion, va entre parentesis una
+            funcion mas de visualizacion o llamada al usuario.
+            ej:     document.write("texto o caracteres");
+                        ↑       ↑
+        apunta: al documento / el metodo    
+        */
+
+        //doble slash permite comentar solo una linea
+
+        document.write("<h1>texto escrito en la parte superior del body desde un script ✔️</h1>")
+
+    </script>
+
+    <h2>visualizaciones del usuario.</h2>
+
+    <script>
+
+        document.write("texto escrito en la parte inferior del body desde un script ✔️")
+    </script>
+
+    <script>
+        /* 
+                    Conatos de administrador 
+        lugar de visualizacion de datos, variables, errores,...,es decir 
+        es un inspector que encontramos en la consola.
+        Sintaxis:
+                console.log();
+                    ↑    ↑
+señala:   a la consola/ 
+        */
+
+        console.log('texto de prueba en la consola');
+
+        /* 
+                    Diferencia entre caracter y operador 
+        Veremos que las comillas SIEMPRE son un entorno de caracteres
+        */
+        console.log('texto de prueba con numeros en la consola 3 + 4 = 7');
+
+        alert("Enhorabuena!, eres el CLIENTE Nº 1000. <br> Dale al botón de aceptar.");
+
+        console.log(3 + 4);
+        /* concatenacion con el simbolo '+' */
+
+        console.log('texto de prueba de ' + 'cooncatenacion con el ' +
+            '+' + 'y sus varios usos ' + 0 + 2 + '.');
+
+
+    </script>
+
+    <!-- sweetalert -->
+    <script>
+        swal("Texto en un sweetalert");
+    </script>
+
+    <!-- sweetalert estructurados -->
+    <script>
+
+        swal("Texto en un sweetalert", " con 2 compomentes",);
+
+
+        swal({
+            tittle: "sweetalert mejorado",
+            text: "pulsa el boton",
+            icon: "success",
+            button: "aceptar"
+        })
+
+    </script>
+
+</body>
+
+</html>
