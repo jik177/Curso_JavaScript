@@ -1,0 +1,10 @@
+div.container{
+    text-align: center;
+}
+
+div.card{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 32rem;
+    margin-top: 2rem;
+}
