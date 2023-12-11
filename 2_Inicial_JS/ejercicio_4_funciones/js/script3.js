@@ -53,14 +53,43 @@ function matematicas() {
         'cambio de tipo a String: ' + numero.toString();
 }
 /* 
-B] objeto 
+B] Construcciones desde la variable.
+    Hemos comprobado que los metodos necesitan partie de un lugar o 
+    el elemento referenciado, se comportara igalmente.
+    Sintaxis:
+        Variable.metodo()
 */
 function textos() {
+    var texto = "JavaScript estructura de cadena de texto.";
 
+    document.getElementById('resultado').innerHTML =
+    '<h3>Objeto texto() y sus aplicaciones:</h3>'+
+    'mostrando la variable: ' + texto + '<br>' +
+    'Minusculas: ' + texto.toLocaleLowerCase() + '<br>' +
+    'Mayusculas: ' + texto.toLocaleUpperCase() + '<br>' +
+    'longitud de la cadena de texto: ' + texto.length + '<br>' +
+    /* posicion del  caracter en la cadena de string.*/
+    'localizacion del caracter p: ' + texto.indexOf('p') + '<br>' +
+    /* localizada la posicion, accedo a su valor unicode. */
+    'valores unicode: ' + texto.charCodeAt(texto.indexOf('p')) + '<br>';
 }
 /* 
-C] objeto
+C] objeto de llamada a fechas y horas, cargadas igualmente en kas librerias
+    de javascript. aqui si llamamos al objeto y como tal lo refinaremos:
+    Sinitaxis:
+    variable = new date()
+    Que se produce; cada vez que llamamos a esta variable, se instancia 
+    automaticamente el objeto, accede a todos los metodos del objeto (fecha())
 */
-function textos() {
+function fechas() {
+    var fecha = new Date();
 
-}
+    document.getElementById('resultado').innerHTML =
+    '<h3>Objeto fecha() y sus aplicaciones:</h3>' +
+    'fecha: ' + fecha + '<br>' +
+    'Fecha: ' + fecha.toLocaleDateString() + '<br>' +
+    'Hora: ' + fecha.toLocaleTimeString() + '<br>' +
+    'Mes: ' + fecha.getMonth() + '<br>' +
+    'Día: ' + fecha.getDay() + '<br>'+
+    'fecha corta: ' + fecha.toLocaleDateString('es-eu',{weekday:'long',month:'short',day:'numeric'}) + '<br>';
+}   
