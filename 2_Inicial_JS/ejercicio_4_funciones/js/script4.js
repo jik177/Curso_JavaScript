@@ -26,4 +26,15 @@ function entrar() {
     document.getElementById('resultado').innerHTML =
         'AUTORIZACION DE ACCESO: ' + elNombre + ' ' +
         elApellido + ' con el email: ' + elEmail + '.';
+
+    swal({
+        title: 'bienvenido: ' + elNombre + ' ' + elApellido,
+        text: 'AUTORIZACION',
+        timer: 2000,
+        button: false,
+        icon: 'success',
+    });
+
 }
+
+
