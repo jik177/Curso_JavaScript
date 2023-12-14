@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>presentacion</title>
+    <!-- links locales -->
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+
+    <!-- bootstraps -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- librerias de  sweetalert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <!-- 
+                    -----Estructuras de control-----
+    Son un conjunto de estructuras ya configuradas que nos ayudaran a tomar 
+    decisiones en funcion de determinadas condiciones(elaboradas por nosotros),
+    ofreciendonos, una gran cantidadde opciones a elegir:
+
+                    a) If else
+                    b) switch case
+                    c) for:
+                        1) for in
+                        2) for of
+                        3) for each
+                    d) do while
+
+    a) If else:
+        Sintaxis:
+      1)
+        if(condicion == true){
+            la acotacion de dichas estructuras, estara entre corchetes. En el intante
+            que el "if" no es true, pasara a la siguiente estructura, es decir, "else"
+        }
+
+      2)
+        if(condicion){
+            ejecucion n...
+            ejecucion n + 1
+        }
+        else(condicion){
+            ejecucion s...
+            ejecucion s+1
+        }
+-->
+
+    <script>
+        var numero1 = Math.random()*10;
+        /*condicion sencillas
+        if (numero1 >= 5) {
+            swal("numero1 es mayor o igual que 5");
+        } else {
+            swal("numero1 es menor que 5");
+        }
+        */
+
+        //condicion compuesta
+        var numero2 = Math.random()*10;
+        if (numero1 >= 5) {
+            swal("numero1 es mayor o igual que 5");
+        } else if (numero2 >= 5) {
+            swal("numero2 es mayor o igual que 5");
+        } else {
+            swal("numero1 y numero2 son menor que 5");
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
