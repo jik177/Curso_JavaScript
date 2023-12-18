@@ -1,0 +1,26 @@
+/* 
+    Claramente tenemos 2 entradas en la ejecucion del id 
+    una en el css y otra a traves del script 
+*/
+#resultado {
+    margin: 2% auto;
+    width: 30%;
+    height: 11rem;
+    background-color: #2196f3;
+    text-align: center;
+    border-radius: 8px;
+    padding: 2%;
+}
+
+/* 
+    combinaremos una 3 ejecucion, 2 por id, y una tercera 
+    por asociacion desde una propiedad 
+*/
+
+.sombra {
+    box-shadow:
+        -1px -1px 10px #daeaf8,
+        3px 3px 10px #88939c,
+        6px 5px 10px #35393f;
+        text-shadow:  1px 1px 2px #35393f;
+}

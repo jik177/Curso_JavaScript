@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>presentacion Switch-case</title>
+    <!-- links locales -->
+
+
+    <!-- libreria del css de bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- libreria cojunta de poppers y bundley de bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- 
+            ----- Switch case -----
+
+        Otra estructura mas que permite ejecutar diversas acciones dependiendo de determinadas
+        configuraciones o condiciones previamente establecidas.
+        Su esencia esta, en un conjunto de elecciones o multiples opciones y la necesidad de 
+        identificar una opcion, o decision correcta. que ha de darse la condicion que solo 
+        una de ellas se ejecute.
+        Sintaxis:            
+            switch (condicion evaluada) {
+                case value1(variables asociadas a la condicion: String, number...):
+                    
+                        (aqui tendremos todas las sentencias a ejecutar)
+
+                    break;(cierre de la ejecucion cuando el case en true)
+                case value2:
+                    break;
+                    -
+                    -
+                    etc...
+                default:(entendido como un else, es decir, que salta si ningun caso es correcto.)
+                    break;
+            }
+
+ -->
+    <div class="container">
+        <h2><u>Ejemplo:</u> Switch-case</h2>
+        <button class="btn btn-danger" onclick="identificacion()">Identificador de genero</button>
+    </div>
+
+    <script>
+
+        function identificacion() {
+            /* al definir la variable se el la que voy a comparar con las opciones 
+            esta sera mi 'key' */
+            var sexo = prompt('conoce tu genero:');
+
+            
+            switch (sexo.toLowerCase()) {
+                case 'hombre':/* OJO, la variable que toma en el caso es estricta. */
+                    swal('es el ser humano de sexo masculino, ...')
+                    break;
+                case 'mujer':
+                    swal('es el ser humano de sexo femenino, ...')
+                    break;
+                case 'transgenero':
+                    swal('es el ser humano que se identifica con el genero ...')
+                    break;
+                case 'no binario':
+                    swal('es el ser humano que no se identifica con ningun genero, ...')
+                    break;
+                default:
+                    swal('diregase a su psicologo mas cercano')
+                    break;
+            }
+
+        }
+
+
+
+    </script>
+
+    <!-- librerias de  sweetalert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
