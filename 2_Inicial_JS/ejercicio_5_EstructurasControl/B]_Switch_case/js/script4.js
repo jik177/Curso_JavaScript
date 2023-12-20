@@ -1,22 +1,26 @@
-var hoy = new Date();
-
 function inicioReloj() {
     //declaracion de variables
-
+    var hoy = new Date();
     //variables secundarias reloj
     var horas = hoy.getHours();
     var min = hoy.getMinutes();
     var seg = hoy.getSeconds();
+    /* uso de la funcion perfecta para generar las decenas */
+    seg = decenas(seg);
+    min = decenas(min);
+    horas = decenas(horas);
+
+
     //var secindarias calendario
     var Ndia = hoy.getDate();
-    var dia = hoy.toLocaleDateString('es-eu',{weekday:'long'});
+    var dia = hoy.toLocaleDateString('es-eu', { weekday: 'long' });
     var mes = hoy.getMonth();
     var anyo = hoy.getFullYear();
 
 
 
     document.getElementById('reloj').innerHTML =
-        '' + horas + ' : ' + min + ' : ' + seg + '.';
+        '' + horas + ' : ' + min + ' : ' + seg;
 
     /* gestion del calendario */
     switch (mes) {
@@ -64,5 +68,29 @@ function inicioReloj() {
 
     document.getElementById('fecha').innerHTML =
         '' + dia + ', ' + Ndia + ' / ' + mes + ' / ' + anyo + '.';
+    /* 
+        Ejecuciones de funcion a pertir de un parametro de tiempo definido
+        Dos formas de ejecucion:
+        a) Ejecucion clasica
+            setTimeout{funtionfintionAllamar1(),
+                funtionfintionAllamar2()},temporizadas en milisegundos);
 
+        b)  Ejecucion mutada:
+             setTimeout(() => {funtionfintionAllamar1(),funtionfintionAllamar2()},timeout);
+
+    */
+    setTimeout(function () { inicioReloj() }, 1000);
+}
+
+/* ejecucion de una funcion perfecta, sera la ejecucion 
+de referencia por donde quiera hacer pasar una variable.
+
+Aparecera un comcepto nuevo, neceario de definir que es el 'return'*/
+
+function decenas(x) {
+    if (x < 10) {
+        x = '0' + x;
+
+    }
+    return (x);
 }
