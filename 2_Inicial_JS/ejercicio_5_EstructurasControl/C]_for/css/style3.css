@@ -1,0 +1,9 @@
+#resultado{
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    background-color: lightgreen;
+    border: 4 solid burlywood;
+    margin: 1rem auto;
+}
