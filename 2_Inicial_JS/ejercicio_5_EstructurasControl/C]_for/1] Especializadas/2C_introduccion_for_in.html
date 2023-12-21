@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introduccion for in </title>
+    <!-- links locales -->
+    <!--    <link rel="stylesheet" href=""> -->
+
+    <!-- libreria del css de bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- libreria cojunta de poppers y bundley de bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h3>For in</h3>
+        <!-- 
+                    --------- for in ---------
+            Vuelve un recorrido con la necesidad de trabajar objetos.dofamos ya no 
+            solo interesa acceder rapidamente al conjunto de elementos sino tambien 
+            a los posibles valores que tenga el elemento.
+               
+                Sistxis:
+                    1º declaramos | no hay condiciones|
+                    la variable y | definidas sino que| NO incrementara o
+                    asigno su     | son las           | decrementara en
+                    valor inicial | establecidasal    | un 'grado' sino que
+                    sin nesidad de| inicio y          | ira recorriendola
+                    declararla.   | al final          | de uno en uno.
+                        ⬇️⬇️             ⬇️⬇️           ⬇️⬇️
+                    for (var x              in            object) {
+                    
+                    
+                    }
+         -->
+        <script>
+
+            var array = []
+            var array2 = {
+                enero: 31,
+                febrero: 28,
+                marzo: 30,
+                abril: 30,
+                mayo: 31,
+                junio: 30,
+                julio: 31,
+                agosto: 30,
+                septiembre: 31,
+                octubre: 30,
+                noviembre: 31,
+                diciembre: 30
+            }
+            for (var dias in array2) {
+
+                document.write('El mes de: ' + dias + '<br>');
+                document.write('Tiene: '+array2[dias ] +' dias' +     '<br>')
+                document.write('___________________' + '<br>')
+            }
+
+        </script>
+    </div>
+    <!-- script locales -->
+    <script src="js/script1.js"></script>
+    <!-- librerias de  sweetalert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
